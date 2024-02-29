@@ -14,9 +14,9 @@ public class Main {
 		
 		pi = 3.14159;
 		ray = sc.nextDouble();
-		area = pi * Math.pow(ray, 2);
+		area = pi * (Math.sqrt(ray));
 		
-		System.out.printf("A = %.4f", area);
+		System.out.printf("A = %.4f" + area);
 		
 	}
 

@@ -16,7 +16,7 @@ public class Main {
 		ray = sc.nextDouble();
 		area = pi * Math.pow(ray, 2);
 		
-		System.out.printf("A = %.4f", area);
+		System.out.printf("A = %.4f" + area);
 		
 	}
 
