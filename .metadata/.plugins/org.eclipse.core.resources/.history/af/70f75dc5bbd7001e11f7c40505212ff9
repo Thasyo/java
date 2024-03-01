@@ -1,0 +1,19 @@
+import java.util.Locale;
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner(System.in);
+		
+		int code_part1, number_part1, code_part2, number_part2;
+		double value1, value2;
+		
+		code_part1 = sc.nextLine();
+		number_part1 = sc.nextLine();
+		
+	}
+
+}
