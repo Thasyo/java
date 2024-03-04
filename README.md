@@ -1,5 +1,7 @@
 <h1>Anotações sobre as aulas</h1>
 
+<h1>Sessão 04 - Estrutura Sequencial</h1>
+
 <h2><strong>PROCESSAMENTO DE DADOS E CASTING</strong></h2>
 
 <h3>Processamento de Dados</h3>
@@ -245,7 +247,136 @@
 </pre>
 
 
+<h1>Sessão 05 - Estrutura Condicional</h1>
 
+## EXPRESSÕES COMPARATIVAS
 
+- Expressão -> Resultado -> Boolean (verdadeiro ou falso)
+    
+    - Exemplo : 5<=10 ? falso
+
+### Operadores Comparativos
+
+- "<" = Menor
+- ">" = Maior
+- "<=" = Menor ou igual
+- ">=" = Maior ou igual
+- "==" = Igual
+- "!=" = Diferente
+
+#### Exemplos de expressões comparativas
+
+- Suponha que x é igual a 5.
+
+    - X > 0 = True  
+    - X == 3 = False
+    - 10 <= 30 = True 
+    - X != 2 = True
+
+## EXPRESSÕES LÓGICAS
+
+- Expressão -> Resultado -> Boolean (verdadeiro ou falso)
+
+### Operadores Lógicos
+
+- && = E -> Para ser True, todas as expressões devem ser verdadeiras. 
+- || = OU -> Para ser True, apenas umas das expressões devem ser verdadeiras.
+- ! = NÃO -> Inverte a condição. True para False e False para true. 
+
+#### Exemplos de expressões lógicas
+
+##### Operador Lógico && (E): Suponha que x é igual a 5.
+
+    - (X > 0) && (X != 3) - (Resultado: True) 
+
+    - (X <= 20) && (X == 10) - (Resultado: False)
+
+    - (X <= 20) && (X == 10) && (X != 3) - (Resultado: False)
+
+##### Operador Lógico || (OU): Suponha que x é igual a 5.
+
+    - X == 10 || X <= 20 - (Resultado: True) 
+
+    - X > 0 || X != 3 - (Resultado: True)
+
+    - X <= 0 || X != 3 || X != 5 - (Resultado: True)
+
+##### Operador Lógico ! (NÃO): Suponha que x é igual a 5.
+
+    - !(X == 10) - (Resultado: True) 
+
+    - !(X >= 2) - (Resultado: False)
+
+## EXPRESSÕES CONDICIONAIS
+
+- É uma estrutura de controle que permite definir que um certo bloco de comandos somente será executado dependendo de uma condição.
+
+### Sintaxe de estrutura condicional
+
+#### Simples
+
+<pre>
+    <code>
+        if (condição) {
+            comando 01;
+            comando 02;
+        };
+    </code>
+</pre>
+
+#### Composta
+
+<pre>
+    <code>
+        if (condição) {
+            comando 01;
+            comando 02;
+        } else {
+            comando 03;
+            comando 04;
+        };
+    </code>
+</pre>
+
+#### Encadeamento de estruturas condicionais
+
+<pre>
+    <code>
+        if (condição 01) {
+            comando 01;
+            comando 02;
+        } else if (condição 02) {
+            comando 03;
+            comando 04
+        } else {
+            comando 05;
+            comando 06;
+        };
+    </code>
+</pre>
+
+### Exemplos de expressões lógicas
+
+<pre>
+    <code>
+
+        Scanner sc = new Scanner(System.in);
+
+        int hour;
+
+        System.out.println("Que horas são? ");
+        hour = sc.nextInt();
+
+        if (hour < 12) {
+            System.out.println("Bom dia, calabreso!");
+        } else if (hour < 18) {
+            System.out.println("Boa tarde, caramelo!");
+        } else {
+            System.out.println("Boa noite, cinderela!");
+        };
+
+        sc.close();
+    </code>
+</pre>
 
 
