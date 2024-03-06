@@ -6,18 +6,37 @@ public class Main {
 		
 		Scanner sc = new Scanner(System.in);
 
-        int hour;
+        int x = sc.nextInt();
+        String dia;
+        
+        switch (x) {
+            case 1:
+                dia = "domingo";
+                break;
+            case 2:
+                dia = "segunda";
+                break;
+            case 3:
+                dia = "terca";
+                break;
+            case 4:
+                dia = "quarta";
+                break;
+            case 5:
+                dia = "quinta";
+                break;
+            case 6:
+                dia = "sexta";
+                break;
+            case 7:
+                dia = "sabado";
+                break;
+            default:
+                dia = "valor invalido";
+                break;
+        }
 
-        System.out.println("Que horas são? ");
-        hour = sc.nextInt();
-
-        if (hour < 12) {
-            System.out.println("Bom dia, calabreso!");
-        } else if (hour < 18) {
-            System.out.println("Boa tarde, caramelo!");
-        } else {
-            System.out.println("Boa noite, cinderela!");
-        };
+        System.out.println("Dia da semana: " + dia);
 
         sc.close();
 		

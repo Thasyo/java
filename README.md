@@ -258,10 +258,15 @@
 ### Operadores Comparativos
 
 - "<" = Menor
+
 - ">" = Maior
+
 - "<=" = Menor ou igual
+
 - ">=" = Maior ou igual
+
 - "==" = Igual
+
 - "!=" = Diferente
 
 #### Exemplos de expressões comparativas
@@ -269,8 +274,11 @@
 - Suponha que x é igual a 5.
 
     - X > 0 = True  
+
     - X == 3 = False
+
     - 10 <= 30 = True 
+
     - X != 2 = True
 
 ## EXPRESSÕES LÓGICAS
@@ -279,8 +287,10 @@
 
 ### Operadores Lógicos
 
-- && = E -> Para ser True, todas as expressões devem ser verdadeiras. 
+- && = E -> Para ser True, todas as expressões devem ser verdadeiras.
+
 - || = OU -> Para ser True, apenas umas das expressões devem ser verdadeiras.
+
 - ! = NÃO -> Inverte a condição. True para False e False para true. 
 
 #### Exemplos de expressões lógicas
@@ -378,5 +388,144 @@
         sc.close();
     </code>
 </pre>
+
+## Operadores de atribuição cumulativa
+
+- a += b; => a = a + b;
+
+- a -= b; => a = a - b;
+
+- a *= b; => a = a * b;
+
+- a /= b; => a = a / b;
+
+- a %= b; => a = a % b;
+
+#### Exemplo
+
+<pre>
+    <code>
+
+        Locale.setDefault(Locale.US);
+
+        Scanner sc = new Scanner(System.in);
+        int minutos = sc.nextInt();
+        double conta = 50.0;
+
+        if (minutos > 100) {
+            conta += (minutos - 100) * 2.0;
+        }
+
+        System.out.printf("Valor da conta = R$ %.2f%n", conta);
+        
+        sc.close();
+    </code>
+</pre>
+
+## SWITCH CASE
+
+- Quando se tem várias opções de fluxo a serem tratadas com base no valor de uma variável, ao invés de várias estruturas if-else encadeadas, alguns preferem utilizar a estrutura switch-case.
+
+### Estrutura do Switch Case
+
+<pre>
+    <code>
+        switch ( expressão ) {
+            case valor1:
+                comando1
+                comando2
+                break;
+            case valor2:
+                comando3
+                comando4
+                break;
+
+                .
+                .
+                . 
+
+            default:
+                comando5
+                comando6
+                break;
+        }
+    </code>
+</pre>
+
+### Exemplo 
+
+<pre>
+    <code>
+        Scanner sc = new Scanner(System.in);
+
+        int x = sc.nextInt();
+        String dia;
+
+        switch (x) {
+            case 1:
+                dia = "domingo";
+                break;
+            case 2:
+                dia = "segunda";
+                break;
+            case 3:
+                dia = "terca";
+                break;
+            case 4:
+                dia = "quarta";
+                break;
+            case 5:
+                dia = "quinta";
+                break;
+            case 6:
+                dia = "sexta";
+                break;
+            case 7:
+                dia = "sabado";
+                break;
+            default:
+                dia = "valor invalido";
+                break;
+        }
+
+        System.out.println("Dia da semana: " + dia);
+
+        sc.close();
+    </code>
+</pre>
+
+## Expressão condicional ternária
+
+- Estrutura ocional ao if-else, quando se deseja decidir um valor com base em uma condição;
+
+### Sintaxe
+
+- (condição) ? valor_se_verdadeiro : valor_se_falso;
+
+- (2 > 4) ? 50 : 80 => Resultado: 80;
+
+- (10 != 3) ? "Maria" : "João" => Resultado: Maria;
+
+### Exemplo
+
+<pre>
+    <code>
+        double preco = 34.5;
+        double desconto = (preco < 20.0) ? preco * 0.1 : preco * 0.05;
+
+        System.out.println(desconto);
+
+    </code>
+</pre>
+
+## Escopo e Inicialização
+
+- Escopo de uma variável: é a região do programa onde a variável é 
+válida, ou seja, onde ela pode ser referenciada.
+
+- Uma variável não pode ser usada se não for iniciada.
+
+
+
 
 
