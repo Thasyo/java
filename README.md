@@ -525,6 +525,52 @@ válida, ou seja, onde ela pode ser referenciada.
 
 - Uma variável não pode ser usada se não for iniciada.
 
+<h1>Sessão 06 - Estrutura Repetitivas</h1>
+
+## Estrutura Repetitiva - WHILE
+
+- É uma estrutura de controle que repete um bloco de comandos enquanto uma condição for verdadeira.
+- Quando usar: quando não se sabe previamente a quantidade de repetições que será realizada.
+
+### Sintaxe do While
+
+<pre>
+    <code>
+        while ( condição ) {
+            comando 1
+            comando 2
+        }
+
+        Regras
+
+            - Quando a expressão for verdadeira, executa os comandos e volta pra cima e repete o processo;
+            - Quando a expressão for falsa, pula a estrutura de repetição e os comandos; 
+    </code>
+</pre>
+
+## Exemplo de While
+
+- Fazer um programa que lê números inteiros até que um zero seja lido. Ao final mostra a soma dos números lidos.
+
+<pre>
+    <code>
+        Scanner sc = new Scanner(System.in);
+
+        int number = sc.nextInt();
+        int sum = 0;
+
+        while(number != 0){
+            sum += number;
+            number = sc.nextInt();
+        }
+
+        System.out.println(sum);
+
+        sc.close();
+    </code>
+</pre>
+
+
 
 
 
