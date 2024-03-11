@@ -18,7 +18,7 @@ public class Main {
 		System.out.println("Acesso Permitido.");
 		*/
 		
-		/*Ex 02
+		//Ex 02
 		int X, Y;
 		
 		X = sc.nextInt();
@@ -42,39 +42,7 @@ public class Main {
 		}
 		
 		sc.close();
-		*/
 		
-		//Ex 03
-		int alcool = 0;
-		int gasosa = 0; 
-		int diesel = 0;
-		int input;
-		
-		input = sc.nextInt();
-		
-		while(input != 4){
-			switch(input) {
-				case 1:
-					alcool += 1;
-					break;
-				case 2:
-					gasosa += 1;
-					break;
-				case 3:
-					diesel += 1;
-					break;
-				default:
-					break;
-			}
-			
-			input = sc.nextInt();
-		}
-		
-		System.out.println("Muito Obrigado!");
-		System.out.println("Álcool: " + alcool);
-		System.out.println("Gasolina: " + gasosa);
-		System.out.println("Diesel: " + diesel);
 	}
-	
 
 }
