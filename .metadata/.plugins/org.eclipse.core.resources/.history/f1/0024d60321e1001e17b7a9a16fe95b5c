@@ -22,7 +22,7 @@ public class Main {
 			
 		}*/
 		
-		/*ex02
+		//ex02
 		int n = sc.nextInt();
 		int x = n;
 		int fat = 1;
@@ -35,7 +35,7 @@ public class Main {
 		System.out.println("Fatorial de " + x + ": " + fat);
         
 		
-		sc.close();*/
+		sc.close();
 	}
 	
 
