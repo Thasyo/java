@@ -541,14 +541,14 @@ válida, ou seja, onde ela pode ser referenciada.
             comando 2
         }
 
-        Regras
+        Regras:
 
             - Quando a expressão for verdadeira, executa os comandos e volta pra cima e repete o processo;
             - Quando a expressão for falsa, pula a estrutura de repetição e os comandos; 
     </code>
 </pre>
 
-## Exemplo de While
+### Exemplo de While
 
 - Fazer um programa que lê números inteiros até que um zero seja lido. Ao final mostra a soma dos números lidos.
 
@@ -562,6 +562,50 @@ válida, ou seja, onde ela pode ser referenciada.
         while(number != 0){
             sum += number;
             number = sc.nextInt();
+        }
+
+        System.out.println(sum);
+
+        sc.close();
+    </code>
+</pre>
+
+## Estrutura Repetitiva - FOR
+
+- É uma estrutura de controle que repete um bloco de comandos para um certo intervalo de valores.
+- Quando usar: quando se sabe previamente a quantidade de repetições, ou o intervalo de valores.
+
+### Sintaxe do for
+
+<pre>
+    <code>
+        for ( início ; condição ; incremento) {
+            comando 1
+            comando 2
+        }
+
+        Regras:
+
+            - "início": Executa somente na primeira vez;
+            - "condição": V = executa e volta, F = pula fora; 
+            - "incremento": Executa toda vez que voltar; 
+    </code>
+</pre>
+
+### Exemplo do for
+
+- Fazer um programa que lê um valor inteiro N e depois N números inteiros. Ao final, mostra a soma dos N números lidos.
+
+<pre>
+    <code>
+        Scanner sc = new Scanner(System.in);
+
+        int N = sc.nextInt();
+        int sum = 0;
+
+        for (int i = 0; i < 3 ; i++) {
+            int x = sc.nextInt();
+            sum += x;
         }
 
         System.out.println(sum);
