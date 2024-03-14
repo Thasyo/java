@@ -614,6 +614,72 @@ válida, ou seja, onde ela pode ser referenciada.
     </code>
 </pre>
 
+<h1>Sessão 07 - Outros Tópicos Básicos do Java</h1>
+
+## RESTRIÇÕES PARA NOMES
+
+- Não pode começar com números: use uma letra ou _ no início
+- Não usar acentos ou til
+- Não pode ter espaço em branco
+- Sugestão obrigatória: use nomes que tenham um significado
+
+### Exemplos
+
+    Errado:                             
+
+        int 5minutes;                               
+        int salário;
+        int salario do funcionario;                                            
+
+    Correto:
+
+        int _5minutes;
+        int salario;
+        int salarioDoFuncionario;
+
+## CONVENÇÕES
+
+- Camel Case: lastName
+    
+    - pacotes
+    - atributos
+    - métodos
+    - variáveis e parâmetros
+
+- Pascal Case: ProductService
+    
+    - classes
+
+### Exemplo
+
+    package entities;
+
+    public class Account {
+
+        private String holder;
+        private Double balance;
+
+        public Account(String holder, Double balance) {
+            this.holder = holder;
+            this.balance = balance;
+        }
+
+        public String getHolder() {
+            return holder;
+        }
+
+        public void deposit(double amount) {
+            balance += amount;
+        }
+
+        public void withdraw(double amount) {
+            balance -= amount;
+        }
+
+    }
+
+ 
+
 
 
 
