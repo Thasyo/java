@@ -678,6 +678,32 @@ válida, ou seja, onde ela pode ser referenciada.
 
     }
 
+## OPERADORES BITWISE
+
+- São operadores que fazem operações lógicas bit a bit em valores
+
+- Nós temos os seguintes operadores bitwise:
+
+    - & = Operação "E" bit a bit => Só é verdadeira quando todas as proprosições forem verdadeiras.
+    - | = Operação "OU" bit a bit => Só é falso quando todas as proposições forem falsas.
+    - ^ = Operação "OU-EXCLUSIVO" bit a bit => Só é verdadeira quando apenas UMA proposição for verdadeira.
+
+### Exemplos
+
+    Scanner sc = new Scanner(System.in);
+
+    int mask = 0b100000;
+    int n = sc.nextInt();
+
+    if ((n & mask) != 0) {
+        System.out.println("6th bit is true!");
+    } else {
+        System.out.println("6th bit is false");
+    }
+    
+    sc.close()
+    
+
  
 
 
