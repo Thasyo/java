@@ -702,7 +702,110 @@ válida, ou seja, onde ela pode ser referenciada.
     }
     
     sc.close()
+
+
+## FUNÇÕES PARA STRINGS
+
+- Formatar strings: 
+
+    - toLowerCase() => Deixa toda a string em caixa baixa. 
     
+    - toUpperCase() => Deixa toda a string em caixa alta.
+    
+    - trim() => Retira os espaços do início e do final da string.
+
+- Recortar strings:
+
+    - susbstring(início) => Começa uma nova string a partir da posição indicada no "início".
+    
+    - substring(início, fim) => Começa uma nova string a partir da posição indicada no "início" e finaliza a nova string indicada na posição "fim".
+    
+- Substituir strings:
+
+    - Replace(char, char) => troca a char inicial, pela char final.
+
+    - Replace(string, string) => troca a string inicial, pela string final.
+
+- Buscar strings: 
+
+    - IndexOf("string") => indica a primeira posição da string denotada no parâmetro.
+
+    - LastIndexOf("string") => indica a última posição da string denotada no parâmetro.
+
+- str.Split(" ") => Criar um array da string "str", a partir do parâmetro.
+
+### Exemplo
+
+    Exemplo 01:
+
+    String original = "abcde FGHIJ ABC abc DEFG   ";
+
+    String s01 = original.toLowerCase();
+    String s02 = original.toUpperCase();
+    String s03 = original.trim();
+    String s04 = original.substring(2);
+    String s05 = original.substring(2, 9);
+    String s06 = original.replace('a', 'x');
+    String s07 = original.replace("abc", "xy");
+    int i = original.indexOf("bc");
+    int j = original.lastIndexOf("bc");
+
+    System.out.println("Original: -" + original + "-");
+    System.out.println("toLowerCase: -" + s01 + "-");
+    System.out.println("toUpperCase: -" + s02 + "-");
+    System.out.println("trim: -" + s03 + "-");
+    System.out.println("substring(2): -" + s04 + "-");
+    System.out.println("substring(2, 9): -" + s05 + "-");
+    System.out.println("replace('a', 'x'): -" + s06 + "-");
+    System.out.println("replace('abc', 'xy'): -" + s07 + "-");
+    System.out.println("Index of 'bc': " + i);
+    System.out.println("Last index of 'bc': " + j);
+
+    Resposta do programa:
+
+        Original: -abcde FGHIJ ABC abc DEFG   -
+
+        toLowerCase: -abcde fghij abc abc defg   -
+
+        toUpperCase: -ABCDE FGHIJ ABC ABC DEFG   -
+
+        trim: -abcde FGHIJ ABC abc DEFG-
+
+        substring(2): -cde FGHIJ ABC abc DEFG   -
+
+        substring(2, 9): -cde FGH-
+
+        replace('a', 'x'): -xbcde FGHIJ ABC xbc DEFG   -
+
+        replace('abc', 'xy'): -xyde FGHIJ ABC xy DEFG   -
+
+        Index of 'bc': 1
+
+        Last index of 'bc': 17
+
+
+
+    Exemplo 02:
+
+    String s = "Thasyo Peres Leite";
+
+    String[] vect = s.split(" ");
+
+    String word1 = vect[0];
+    String word2 = vect[1];
+    String word3 = vect[2];
+
+    System.out.println(word1);
+    System.out.println(word2);
+    System.out.println(word3);
+
+    Reposta do programa:
+
+        Thasyo
+        Peres
+        Leite
+
+
 
  
 

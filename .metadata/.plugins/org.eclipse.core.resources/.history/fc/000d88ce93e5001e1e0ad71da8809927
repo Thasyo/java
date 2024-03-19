@@ -3,9 +3,9 @@ public class Main {
 	public static void main(String[] args) {
 		
 
-	    String s = "Thasyo Peres Leite";
+	    String s = "Thasyo Peres Leite   an ";
 
-	    String[] vect = s.split(" ");
+	    String[] vect = s.toUpperCase().split(" ");
 
 	    String word1 = vect[0];
 	    String word2 = vect[1];

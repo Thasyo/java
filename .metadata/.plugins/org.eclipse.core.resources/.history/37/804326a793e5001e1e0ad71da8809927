@@ -5,7 +5,7 @@ public class Main {
 
 	    String s = "Thasyo Peres Leite";
 
-	    String[] vect = s.split(" ");
+	    String[] vect = s.toUpperCase().split(" ");
 
 	    String word1 = vect[0];
 	    String word2 = vect[1];
