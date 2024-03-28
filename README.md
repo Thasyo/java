@@ -871,6 +871,123 @@ válida, ou seja, onde ela pode ser referenciada.
     }
 
 
+<h1>Sessão 08 - Introdução à Programação Orientada a Objetos</h1>
+
+## RESOLVENDO UM PROBLEMA SEM ORIENTAÇÃO A OBJETOS 
+
+- Problema Exemplo
+
+    - Fazer um programa para ler as medidas dos lados de dois triângulos X e Y (suponha medidas
+    válidas). Em seguida, mostrar o valor das áreas dos dois triângulos e dizer qual dos dois triângulos
+    possui a maior área.
+    A fórmula para calcular a área de um triângulo a partir das medidas de seus lados a, b e c é a
+    seguinte: fórmula de Heron.
+
+- Resolução
+
+        Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner(System.in);
+		
+		double xA, xB, xC, yA, yB, yC, areaX, areaY, p;
+		
+		System.out.println("Insira os lados do Triângulo X: ");
+		
+		xA = sc.nextDouble();
+		xB = sc.nextDouble();
+		xC = sc.nextDouble();
+		
+		System.out.println("Insira os lados do Triângulo Y: ");
+
+		yA = sc.nextDouble();
+		yB = sc.nextDouble();
+		yC = sc.nextDouble();
+		
+		p = (xA + xB + xC) / 2.00;
+		
+		areaX = Math.sqrt(p * (p - xA) * (p - xB) * (p - xC));
+		
+		p = (yA + yB + yC) / 2.00;
+		
+		areaY = Math.sqrt(p * (p - yA) * (p - yB) * (p - yC));
+		
+		System.out.printf("Area do triângulo X: %.4f%n", areaX);
+		
+		System.out.printf("Area do triângulo Y: %.4f%n", areaY);
+		
+		if(areaX > areaY) {
+			System.out.println("Maior area e do triângulo: X");
+		} else {
+			System.out.println("Maior area e do triângulo: Y");
+		}
+		
+		sc.close();
+
+## CRIANDO TRÊS CLASSES PARA REPRESENTAR MELHOR O TRIÂNGULO
+
+### Classe
+
+- É um tipo estruturado que pode conter (membros):
+
+    - Atributos (dados / campos)
+
+    - Métodos (funções / operações)
+
+-  A classe também pode prover muitos outros recursos, tais como:
+    
+    - Construtores
+
+    - Sobrecarga
+
+    - Encapsulamento
+
+    - Herança
+
+    - Polimorfismo
+
+- Exemplos:
+
+    - Entidades: Produto, Cliente, Triangulo
+
+    - Serviços: ProdutoService, ClienteService, EmailService, StorageService
+    
+    - Controladores: ProdutoController, ClienteController
+    
+    - Utilitários: Calculadora, Compactador
+    
+    - Outros (views, repositórios, gerenciadores, etc.)
+
+### Instanciação
+
+- Diz respeito a alocação dinâmica de memória:
+
+    <img src="../java/example_with_OO/src/Captura de tela 2024-03-28 084231.png"/>
+
+    - Stack: é o local da memória onde ficam as variáveis estáticas.
+
+    - Heap: Quando instanciamos uma variável, criamos um objeto do tipo da Classe criada e alocamos dinamicamente com o endereço na variável para o espaço Heap da memória com os respectivos atributos criados na Classe. 
+
+
+### Classes, objetos e atributos
+
+- Classe: é a definição do tipo;
+
+<pre>
+    <code>
+        package course;
+
+        public class Triangle {
+
+            public double a;
+            public double b;
+            public double c;
+
+        }
+    </code>
+</pre>
+
+- Objetos: São instâncias da classe;
+
+    <img src="../java/example_with_OO/src/Captura de tela 2024-03-28 085544.png"/>
 
 
 
