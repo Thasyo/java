@@ -990,5 +990,43 @@ válida, ou seja, onde ela pode ser referenciada.
     <img src="../java/example_with_OO/src/Captura de tela 2024-03-28 085544.png"/>
 
 
+## CRIANDO UM MÉTODO PARA OBTERMOS OS BENEFÍCIOS DE REAPROVEITAMENTO E DELEGAÇÃO
+
+- Método: 
+    
+    - é uma função associada a uma classe/objeto. 
+    - Ele define as atividades/ações que determina(o) classe/objeto pode executar.
+    - Métodos são parecidos com funções na programação procedural.
+
+- Vejamos um exemplo na construção do código anterior
+<pre>
+    <code>
+        package course;
+
+        public class Triangle {
+
+            public double a;
+            public double b;
+            public double c;
+
+            public double area() {
+
+                double p = (a + b + c) / 2.00;
+                double result = Math.sqrt(p * (p - a) * (p - b) * (p - c));
+
+                return result;
+
+            }
+
+        }
+    </code>
+</pre>
+
+- Os benefícios de se utilizar métodos são:
+
+    - REAPROVEITAMENTO DE CÓDIGO: Nós eliminamos o código repetido (cálculo das áreas do triângulo x e y) no programa principal;
+    - DELEGAÇÃO DE RESPONSABILIDADE: Quem deve ser responsável por saber como calcular a área de um triângulo é o próprio triângulo. A lógica do cálculo da área não deve estar em outro lugar a não ser na classe/objeto no qual ela pertence e precisa para se realizar alguma ação.
+
+
 
 
