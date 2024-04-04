@@ -1027,6 +1027,51 @@ válida, ou seja, onde ela pode ser referenciada.
     - REAPROVEITAMENTO DE CÓDIGO: Nós eliminamos o código repetido (cálculo das áreas do triângulo x e y) no programa principal;
     - DELEGAÇÃO DE RESPONSABILIDADE: Quem deve ser responsável por saber como calcular a área de um triângulo é o próprio triângulo. A lógica do cálculo da área não deve estar em outro lugar a não ser na classe/objeto no qual ela pertence e precisa para se realizar alguma ação.
 
+## OBJECT E TOSTRING
+
+- Toda classe em java é uma subclasse da classe Object;
+- Object possui os seguintes métodos:
+
+    - getClass(): retorna o tipo do objeto
+    
+    - equals(): compara se o objeto é igual ao outro
+    
+    - hashCode(): retorna um código hash do objeto
+
+    - toString(): converte o objeto para string
+
+- Exemplo de Uso
+
+<pre>
+    <code>
+        public String name;
+        public double price;
+        public int quantity;
+
+        public double totalValueInStock() {
+            return price * quantity;
+        }
+
+        public void addProducts(int quantity) {
+            this.quantity += quantity;
+        }
+
+        public void removeProducts(int quantity) {
+            this.quantity -= quantity;
+        }
+
+        public String toString() {
+            return name
+                + ", $ "
+                + String.format("%.2f", price)
+                + ", "
+                + quantity
+                + " units, Total: $ "
+                + String.format("%.2f", totalValueInStock());
+        }
+    </code>
+</pre>
+
 
 
 
