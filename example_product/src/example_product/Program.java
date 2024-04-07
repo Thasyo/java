@@ -28,7 +28,6 @@ public class Program {
 		
 		System.out.println();
 		System.out.println("How many products do you want to add to stock? ");
-		
 		int addQuantity = sc.nextInt();
 		p.addProducts(addQuantity);
 		
@@ -36,7 +35,6 @@ public class Program {
 		
 		System.out.println();
 		System.out.println("How many products do you want to remove to stock? ");
-		
 		int removeQuantity = sc.nextInt();
 		p.removeProducts(removeQuantity);
 		
