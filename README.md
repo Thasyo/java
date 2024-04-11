@@ -1089,7 +1089,44 @@ válida, ou seja, onde ela pode ser referenciada.
 
 - Uma classe que possui somente membros estáticos, pode ser uma classe estática também. Esta classe não poderá ser instanciada.
 
+</br>
+
+<h1>SESSION 09 - CONSTRUTORES, PALAVRA THIS, SOBRECARGA E ENCAPSULAMENTO</h1>
+
+## CONSTRUTORES
+
+- É uma operação especial da classe, que executa no momento da instanciação do objeto.
+
+- Usos comuns:
+    
+    - Iniciar valores dos atributos;
+    
+    - Permitir ou obrigar que o objeto receba dados / dependências no momento de sua instanciação (injeção de dependência);
+
+- Se um construtor customizado não for especificado, a classe disponibiliza o construtor padrão:
+
+    - Product p = new Product();
+
+- É possível especificar mais de um construtor na mesma classe (sobrecarga);
 
 
+### Exemplo
+
+    package entities;
+
+    public class Product {
+
+        public String name;
+        public double price;
+        public int quantity;
+
+        public Product(String name, double price, int quantity) {
+            this.name = name;
+            this.price = price;
+            this.quantity = quantity;
+        }
+
+        logo abaixo do construtor, existem os métodos...
+    }
 
 

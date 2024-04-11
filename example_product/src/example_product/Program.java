@@ -12,16 +12,16 @@ public class Program {
 		Locale.setDefault(Locale.US);
 		Scanner sc = new Scanner(System.in);
 		
-		Product p = new Product();
-		
 		System.out.println("Product Name: ");
-		p.name = sc.nextLine();
+		String name = sc.nextLine();
 		
 		System.out.println("Product Price: ");
-		p.price = sc.nextDouble();
+		double price = sc.nextDouble();
 		
 		System.out.println("Product Quantity: ");
-		p.quantity = sc.nextInt();
+		int quantity = sc.nextInt();
+		
+		Product p = new Product(name, price, quantity);
 		
 		System.out.println();
 		System.out.println("Product Data: " + p);
@@ -39,7 +39,6 @@ public class Program {
 		p.removeProducts(removeQuantity);
 		
 		System.out.println("Update Data: " + p);
-		
 		
 		sc.close();
 	}
