@@ -1130,3 +1130,82 @@ válida, ou seja, onde ela pode ser referenciada.
     }
 
 
+## PALAVRA THIS
+
+- É uma referência para o próprio objeto.
+
+- Usos comuns:
+
+    - Diferenciar atributos de variáveis locais.
+
+    - Passar o próprio objeto como argumento na chamada de uM método ou construtor.
+
+### Exemplo 01
+
+    public Product(String name, double price, int quantity) {
+        
+        this.name = name;
+        this.price = price;
+        this.quantity = quantity;
+    
+    }
+
+    * A palavra THIS nesse código, está diferencia atributos do próprio objeto das variáveis locais do construtor.
+
+
+### Exemplo 02
+
+    public class ChessMatch {
+
+        (...)
+
+        placeNewPiece('e', 1, new King(board, color.WHITE, this))
+
+        (...) 
+
+    }
+
+    * A palavra THIS nesse código, está referenciando e passando como parâmetro a própria classe ChessMatch neste método.
+
+
+## SOBRECARGA
+
+- É um recurso que uma classe possui de oferecer mais de uma operação com o mesmo nome, porém com diferentes listas de atributos.
+
+### Exemplo 
+
+    package entities;
+    public class Product {
+        public String name;
+        public double price;
+        public int quantity;
+
+        public Product() {
+
+        }
+
+        public Product(String name, double price, int quantity) {
+            
+            this.name = name;
+            this.price = price;
+            this.quantity = quantity;
+        
+        }
+
+        public Product(String name, double price) {
+
+            this.name = name;
+            this.price = price;
+
+        }
+    }
+
+    (...)
+
+    * Aqui vemos um exemplo de SOBRECARGA. Temos 3 classes com o mesmo nome, mas com diferentes listas de atributos.
+
+    * 1° Classe: Construtor Padrão;
+
+    * 2° Classe: Construtor Personalizado que referencia todos os atributos da classe;
+    
+    * 3° Classe: Construtor Personalizado que referencia apenas alguns atributos da classe;
