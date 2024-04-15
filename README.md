@@ -1209,3 +1209,82 @@ válida, ou seja, onde ela pode ser referenciada.
     * 2° Classe: Construtor Personalizado que referencia todos os atributos da classe;
     
     * 3° Classe: Construtor Personalizado que referencia apenas alguns atributos da classe;
+
+## ENCAPSULAMENTO
+
+- É o um dos 04 Pilares de Orientação a Objetos.
+
+- Consiste em omitir detalhes de implementação de uma classe, deixando disponível somente as operações seguras e que mantenham o objeto em um estado consistente.
+
+- O objeto deve sempre estar em um estado consistente, e a própria classe deve garantir isso.
+
+### Regra Geral Básica
+
+- Um objeto NUNCA deve expor os atributos da classe.
+
+- Os atributos da classe devem estar com o modificador de acesso PRIVATE.
+
+- Os atributos devem acessados por meio de métodos GET e SET.
+
+    - Se refere ao padrão JavaBeans.
+
+## Exemplo
+
+    private String name;
+    private double price;
+    private int quantity;
+
+    public Product() {
+
+    }
+
+    public Product(String name, double price, int quantity) {
+
+        this.name = name;
+        this.price = price;
+        this.quantity = quantity;
+
+    }
+
+    public Product(String name, double price) {
+
+        this.name = name;
+        this.price = price;
+
+    }
+
+    public String getName() {
+
+        return name;
+
+    }
+
+    public void setName(String name) {
+
+        this.name = name;
+
+    }
+
+    public double getPrice() {
+
+        return price;
+
+    }
+
+    public void setPrice(double price) {
+
+        this.price = price;
+
+    }
+
+    public int getQuantity() {
+
+        return quantity;
+
+    }
+
+    (...)
+
+    * Inicialmente, eu criei atributos em PRIVATE, omitindo assim, detalhes das implementações da classe Product, Deixando o objeto em um estado consistente. 
+
+    * Logo após os construtores e as sobrecargas, eu inclui na Classe a regra básica de acesso aos atributos, por meio dos métodos GET e SET. 
