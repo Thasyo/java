@@ -1288,3 +1288,16 @@ válida, ou seja, onde ela pode ser referenciada.
     * Inicialmente, eu criei atributos em PRIVATE, omitindo assim, detalhes das implementações da classe Product, Deixando o objeto em um estado consistente. 
 
     * Logo após os construtores e as sobrecargas, eu inclui na Classe a regra básica de acesso aos atributos, por meio dos métodos GET e SET. 
+
+
+## MODIFICADORES DE ACESSO
+
+- PRIVATE: O membro só pode ser acessado na própria classe.
+
+- (nada): O membro só pode ser acessado nas classes do mesmo pacote.
+
+- PROTECTED: O membro só pode ser acessado nas classes do mesmo pacote, bem como em subclasses de pacotes diferentes.
+
+- PUBLIC: O membro pode ser acessado em todas as classes. (ao menos que ele resida em um módulo diferente que não exporte o pacote em que ele está).
+
+- Para mais informações, acesse: [Modificadores de Acesso](https://docs.oracle.com/javase/tutorial/java/javaOO/accesscontrol.html)
