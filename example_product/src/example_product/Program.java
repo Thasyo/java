@@ -39,6 +39,10 @@ public class Program {
 		int addQuantity = sc.nextInt();
 		p.addProducts(addQuantity);
 		
+		if(addQuantity == 1) {
+			System.out.println("Essa joça tá pegando!");
+		}
+		
 		System.out.println("Update Data: " + p);
 		
 		System.out.println();
