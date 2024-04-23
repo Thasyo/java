@@ -1100,7 +1100,7 @@ válida, ou seja, onde ela pode ser referenciada.
 - Usos comuns:
     
     - Iniciar valores dos atributos;
-    
+    - É possível também iniciar valores com métodos e seus parâmetros;
     - Permitir ou obrigar que o objeto receba dados / dependências no momento de sua instanciação (injeção de dependência);
 
 - Se um construtor customizado não for especificado, a classe disponibiliza o construtor padrão:
@@ -1138,7 +1138,7 @@ válida, ou seja, onde ela pode ser referenciada.
 
     - Diferenciar atributos de variáveis locais.
 
-    - Passar o próprio objeto como argumento na chamada de uM método ou construtor.
+    - Passar o próprio objeto como argumento na chamada de um método ou construtor.
 
 ### Exemplo 01
 

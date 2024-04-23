@@ -8,10 +8,17 @@ public class Account {
 	
 	public static final double WITHDRAWAL_FEE = 5.00;
 	
-	public Account() {
-		
+	public Account(String holder, int number) {
+		this.holder = holder;
+		this.number = number;
 	}
 	
+	public Account(String holder, int number, double initialDeposit) {
+		this.holder = holder;
+		this.number = number;
+		deposit(initialDeposit);
+	}
+
 	public String getHolder() {
 		return holder;
 	}
@@ -24,16 +31,8 @@ public class Account {
 		return number;
 	}
 	
-	public void setNumber(int number) {
-		this.number = number;
-	}
-	
 	public double getBalance() {
 		return balance;
-	}
-	
-	public void setBalance(double balance) {
-		this.balance = balance;
 	}
 	
 	public double deposit(double cash) {
@@ -47,7 +46,7 @@ public class Account {
 		return balance -= (withdrawValue);
 	}
 	
-	public String String() {
+	public String toString() {
 		return "Account: " + number
 				+ ", Holder: " + holder
 				+ ", Balance: $ " + String.format("%.2f", getBalance());
