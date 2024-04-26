@@ -1301,3 +1301,37 @@ válida, ou seja, onde ela pode ser referenciada.
 - PUBLIC: O membro pode ser acessado em todas as classes. (ao menos que ele resida em um módulo diferente que não exporte o pacote em que ele está).
 
 - Para mais informações, acesse: [Modificadores de Acesso](https://docs.oracle.com/javase/tutorial/java/javaOO/accesscontrol.html)
+
+
+</br>
+
+<h1>SESSION 10 - MEMÓRIA, ARRAYS E LISTAS</h1>
+
+## TIPOS REFERÊNCIA X TIPOS PRIMITIVOS
+
+- Classes são tipos referênica
+
+    - Variáveis cujo tipo são classes, são "tentáculos" (ponteiros) que referência para um determinado local da memória.
+
+    - Ex: Product p1, p2;
+
+    - Valor NULL: os tipos referência aceitam o valor 'null', onde significa que a variável não está apontando para ninguém.
+
+- Tipos Primitivos são Tipos Valor
+
+    - Os tipos primitivos não apontam para nenhum local da memória, mas armazenam determinado valor dentro da variável em si.
+
+    - Ex: double x = 10;
+
+- Aqui estão os 08 tipos primitivos:
+
+    | Type        | Contains                  | Default  | Size    |
+    |-------------|---------------------------|----------|---------| 
+    | Boolean     | true or false             | false    | 1 bit   |
+    | Char        | Unicode character         | \u0000   | 16 bits | 
+    | Byte        | Signed integer            | 0        | 8 bits  | 
+    | Short       | Signed integer            | 0        | 16 bits |
+    | Int         | Signed integer            | 0        | 32 bits |
+    | Long        | Signed integer            | 0        | 64 bits | 
+    | Float       | IEEE 754 floating point   | 0.0      | 32 bits |
+    | Double      | IEEE 754 floating point   | 0.0      | 64 bits |
