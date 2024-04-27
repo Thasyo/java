@@ -1335,3 +1335,58 @@ válida, ou seja, onde ela pode ser referenciada.
     | Long        | Signed integer            | 0        | 64 bits | 
     | Float       | IEEE 754 floating point   | 0.0      | 32 bits |
     | Double      | IEEE 754 floating point   | 0.0      | 64 bits |
+
+## DESALOCAÇÃO DE MEMÓRIA
+
+### Desalocação por Garbage Collector
+
+- É um processo que automatiza o gerenciamento de memória de um
+programa em execução (heap);
+
+- O garbage collector monitora os objetos alocados dinamicamente (em execução) pelo programa (no heap), desalocando (excluindo) aqueles que não estão mais sendo utilizados.
+
+- Exemplo:
+
+```
+
+    Product p1, p2;
+
+    p1 = new Product("TV", 900.00, 0);
+
+    p2 = new Product("Mouse", 30.00, 0);
+
+    p1 = p2;
+
+    "p1 = p2: é onde ocorre a desalocação por garbage collector. Ou seja, 
+    os dados que antes pertenciam ao 'p1' vão ser excluídos em um 
+    determinado momento pois não estão mais em uso."
+
+```
+
+### Desalocação por Escopo
+
+- Ocorre quando há variáveis declaradas nesse escopo;
+
+- Quando o código do escopo finaliza, as variáveis declaradas nesse escopo são extinguidas;
+
+- Exemplo:
+
+```
+
+    void method1() {
+
+        int x = 10;
+
+        if (x > 0) {
+
+            int y = 20;
+
+        }
+
+        System.out.println(x);
+    }
+
+    "Quando a execução chega no 'System.out.println(x);' a variável 'y' 
+    deixa de existir, pois está localizada em um escopo local de condição."
+
+```
