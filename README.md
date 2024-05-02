@@ -1390,3 +1390,94 @@ programa em execução (heap);
     deixa de existir, pois está localizada em um escopo local de condição."
 
 ```
+
+## VETORES
+
+- Vector: é nome dado a arranjos unidimensionais;
+
+- Arranjo (Array) é um estrutura de dados:
+    
+    - Homogênea (dados do mesmo tipo);
+    - Ordenada (dados acessados por meio de posições);
+    - Alocada de uma só na memória em um bloco contíguo;
+
+- Vantagens:
+
+    - Acesso imediato aos elementos pela sua posição;
+
+- Desvantagens:
+
+    - Tamanho fixo;
+    - Dificuldade para realizar inserções e deleções;
+
+- Exemplo 01: Manipulação de vetor de elementos tipo valor (tipo primitivo)
+
+```
+
+    /*
+    
+        Fazer um programa para ler um número inteiro N e a altura de N
+	    pessoas. Armazene as N alturas em um vetor. Em seguida, mostrar a
+	    altura média dessas pessoas.
+
+    */
+
+    Locale.setDefault(Locale.US);
+	Scanner sc = new Scanner(System.in);
+		
+	int n = sc.nextInt();
+	double[] heightPeople = new double[n];
+	double sumHeight = 0.00;
+	double averageHeight = 0.00;
+		
+	for(int i = 0; i < n; i++){
+			
+		heightPeople[i] = sc.nextDouble();
+		sumHeight += heightPeople[i];
+	}
+		
+	averageHeight = sumHeight / n;
+		
+	System.out.printf("AVERAGE HEIGHT OF PEOPLE: %.2f", averageHeight);
+
+```
+
+- Exemplo 02: Manipulação de vetor de elementos tipo referência (classe)
+
+```
+
+    /*
+    
+        Fazer um programa para ler um número inteiro N e os dados (nome e
+        preço) de N Produtos. Armazene os N produtos em um vetor. Em
+        seguida, mostrar o preço médio dos produtos.
+
+    */
+
+    Locale.setDefault(Locale.US);
+	Scanner sc = new Scanner(System.in);
+		
+	int n = sc.nextInt();
+	Product[] product = new Product[n];
+	double sum = 0.00;
+	double averageProductPrice = 0.00;
+
+	for(int i = 0; i < product.length; i++) {
+			
+		sc.nextLine();
+		String name = sc.nextLine();
+		double price = sc.nextDouble();
+			
+		product[i] = new Product(name, price);
+			
+		sum += product[i].getPrice();
+			
+	}
+		
+	averageProductPrice = sum / product.length;
+		
+	System.out.printf("AVERAGE OF PRODUCTS PRICE: %.2f", averageProductPrice);
+		
+	sc.close();
+
+```
