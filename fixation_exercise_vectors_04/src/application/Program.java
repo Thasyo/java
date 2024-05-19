@@ -43,6 +43,8 @@ public class Program {
 		System.out.print("QUANTIDADE DE PARES: ");
 		System.out.println(pairsQuantity);
 
+		
+		sc.close();
 	}
 
 }
