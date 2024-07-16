@@ -1481,3 +1481,86 @@ programa em execução (heap);
 	sc.close();
 
 ```
+
+## BOXING, UNBOXING E WRAPPER CLASSES
+
+### BOXING
+
+- É o processo de conversão de um objeto tipo valor para um objeto 
+tipo referência compatível.
+
+```
+    Exemplo de Boxing
+
+    int x = 20;
+
+    Object obj = x;
+
+```
+
+### UNBOXING
+
+- É o processo de conversão de um objeto tipo referência para um 
+objeto tipo valor compatível.
+
+```
+    Exemplo de unboxing
+
+    int x = 20;
+
+    Object obj = x;
+
+    int y = (int) obj;
+```
+
+### WRAPPER CLASSES
+
+- São classes equivalentes aos tipos primitivos;
+
+- Boxing e Unboxing é natural da linguagem;
+
+- Uso comum: campos de entidades em sistemas de informação (IMPORTANTE!!);
+
+    - Pois os tipos referência (classes) aceitam valor null e usufruem dos recursos OO;
+
+```
+    EXEMPLO DE WRAPPER CLASSES
+
+    public class Product {
+
+        public String name;
+        public Double price;
+        public Integer quantity;
+
+        (...)
+
+    }
+```
+
+## LAÇOS FOR EACH
+
+- Sintaxe opcional e simplificada para percorrer coleções
+Sintaxe:
+
+```
+    for (Tipo apelido : coleção) {
+        
+        <comando 1>
+            
+        (...)
+    }
+```
+
+- Exemplo
+
+```
+    String[] names = new String[] {"Thasyo", "Luana", "Jennyfer"};
+
+    for (String name : names){
+
+        System.out.println(name);
+
+    }
+```
+
+ 

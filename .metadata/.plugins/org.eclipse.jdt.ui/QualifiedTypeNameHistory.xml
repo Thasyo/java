@@ -13,4 +13,5 @@
     <fullyQualifiedTypeName name="entities.Person"/>
     <fullyQualifiedTypeName name="util.percentagePeopleUnder16"/>
     <fullyQualifiedTypeName name="java.util.Locale"/>
+    <fullyQualifiedTypeName name="entities.Rental"/>
 </qualifiedTypeNameHistroy>
