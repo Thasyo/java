@@ -3,7 +3,6 @@
     <fullyQualifiedTypeName name="entities.Triangle"/>
     <fullyQualifiedTypeName name="java.text.Format"/>
     <fullyQualifiedTypeName name="entities.Rectangle"/>
-    <fullyQualifiedTypeName name="entities.Employee"/>
     <fullyQualifiedTypeName name="entities.Student"/>
     <fullyQualifiedTypeName name="util.CurrencyConverter"/>
     <fullyQualifiedTypeName name="entities.Product"/>
@@ -14,4 +13,5 @@
     <fullyQualifiedTypeName name="util.percentagePeopleUnder16"/>
     <fullyQualifiedTypeName name="java.util.Locale"/>
     <fullyQualifiedTypeName name="entities.Rental"/>
+    <fullyQualifiedTypeName name="entities.Employee"/>
 </qualifiedTypeNameHistroy>
