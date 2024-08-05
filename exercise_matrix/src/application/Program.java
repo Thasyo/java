@@ -34,15 +34,18 @@ public class Program {
 			for(int j = 0; j < columns; j++) {
 				if(matrix[i][j] == number) {
 					System.out.println("Posição: [" + i + "][" + j + "]");
-					int left = Math.abs(matrix[i][1-j]);
-					int top = Math.abs(matrix[1-i][j]);
-					int right = Math.abs(matrix[i][1+j]);
-					int down = Math.abs(matrix[1+i][j]);
-					
-					System.out.printf("Left: %d%n", left);
-					System.out.printf("Top: %d%n", top);
-					System.out.printf("Right: %d%n", right);
-					System.out.printf("Down: %d%n", down);
+					if (j > 0) {
+						System.out.println("Left: " + matrix[i][j-1]);
+					}
+					if (i > 0) {
+						System.out.println("Up: " + matrix[i-1][j]);
+					}
+					if (j < matrix[i].length-1) {
+						System.out.println("Right: " + matrix[i][j+1]);
+					}
+					if (i < matrix.length-1) {
+						System.out.println("Down: " + matrix[i+1][j]);
+					}
 				}
 			}
 		}
