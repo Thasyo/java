@@ -1711,3 +1711,99 @@ Sintaxe:
     - Tamanho fixo
 
     - Dificuldade para se realizar inserções e deleções
+
+<h1>SESSÃO 11 - TÓPICOS ESPECIAIS EM JAVA: DATA-HORA</h1>
+
+## Conceitos importantes
+
+- Data-[hora] local:
+
+    - ano-mês-dia-[hora] sem fuso horário
+    - [hora] => opcional
+
+- Data-hora global: 
+
+    - ano-mês-dia-hora com fuso horário
+
+- Duração: 
+
+    - tempo decorrido entre duas data-horas
+
+### Exemplo "data-hora global" com fuso horário
+
+- Banco de dados, API: 2022-07-23T14:30:00Z
+
+    - T: indica que logo após será inserido o horário.
+    - Z: indica que o horário foi inserido com fuso horário (de londres, nesse caso).
+
+## Quando usar?
+
+- Data-[hora] local: 
+    
+    - Quando o momento exato não interessa a pessoas de outro fuso horário.
+    
+    - Uso comum: sistemas de região única, Excel.
+    
+        - Data de nascimento: "15/06/2001"
+    
+        - Data-hora da venda: "13/08/2022 às 15:32" (presumindo não interessar fuso horário)
+
+- Data-hora global:
+
+    - Quando o momento exato interessa a pessoas de outro fuso horário.
+    
+    - Uso comum: sistemas multi-região, web.
+
+        - Quando será o sorteio? "21/08/2022 às 20h (horário de São Paulo)"
+        
+        - Quando o comentário foi postado? "há 17 minutos"
+        
+        - Quando foi realizada a venda? "13/08/2022 às 15:32 (horário de São Paulo)"
+        
+        - Início e fim do evento? "21/08/2022 às 14h até 16h (horário de São Paulo)"
+
+## Timezone (fuso horário)
+
+- GMT - Greenwich Mean Time
+    
+    - Horário de Londres
+    
+    - Horário do padrão UTC -CoordinatedUniversal Time
+    
+    - Também chamado de "Z" time, ou Zulu time
+
+- Outros fuso horários são relativos ao GMT/UTC:
+    
+    - São Paulo: GMT-3
+    
+    - Manaus: GMT-4
+    
+    - Portugal: GMT+1
+
+- Muitas linguagens/tecnologias usam nomes para as timezones:
+    
+    - "US/Pacific"
+    
+    - "America/Sao_Paulo"
+    
+    - etc.
+
+## Padrão ISO 8601
+
+- Data-[hora] local:
+    
+    - 2022-07-21
+    
+    - 2022-07-21T14:52
+    
+    - 2022-07-22T14:52:09
+    
+    - 2022-07-22T14:52:09.4073 (esses valores após o ponto, referem-se aos segundos)
+
+- Data-hora global:
+    
+    - 2022-07-23T14:52:09Z
+    
+    - 2022-07-23T14:52:09.254935Z
+    
+    - 2022-07-23T14:52:09-03:00 ( esses valores após o "traço", referem-se ao fuso horário indicado, no caso, o horário de São Paulo "-03:00" )
