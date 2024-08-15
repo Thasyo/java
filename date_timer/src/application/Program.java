@@ -3,6 +3,7 @@ package application;
 import java.time.Instant;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
 
 public class Program {
@@ -33,17 +34,38 @@ public class Program {
 		LocalDate date10 = LocalDate.of(2002, 9, 25);
 		LocalDateTime date11 = LocalDateTime.of(2002, 9, 25, 10, 35);
 		
-		System.out.println(date01);
-		System.out.println(date02);
-		System.out.println(date03);
-		System.out.println(date04);
-		System.out.println(date05);
-		System.out.println(date06);
-		System.out.println(date07);
-		System.out.println(date08);
-		System.out.println(date09);
-		System.out.println(date10);
-		System.out.println(date11);
+		System.out.println("Date01 = " + date01);
+		System.out.println("Date02 = " + date02);
+		System.out.println("Date03 = " + date03);
+		System.out.println("Date04 = " + date04);
+		System.out.println("Date05 = " + date05);
+		System.out.println("Date06 = " + date06);
+		System.out.println("Date07 = " + date07);
+		System.out.println("Date08 = " + date08);
+		System.out.println("Date09 = " + date09);
+		System.out.println("Date10 = " + date10);
+		System.out.println("Date11 = " + date11);
+		
+		//CONVERTENDO DATA E HORA PARA TEXTO.
+		LocalDate date12 = LocalDate.parse("2022-09-25");
+		DateTimeFormatter fmt03 = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+		
+		LocalDateTime date13 = LocalDateTime.parse("2002-09-25T10:15");
+		DateTimeFormatter fmt04 = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm");
+		
+		Instant date14 = Instant.parse("2022-09-25T01:47:26Z");
+		DateTimeFormatter fmt05 = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm").withZone(ZoneId.systemDefault()); //ZoneId.systemDefault() - pega a data e hora do usuário, automaticamente.
+		
+		System.out.println("Date12 = " + date12.format(fmt03)); //1° Forma de escrita para formatar somente a data para local um texto.
+		System.out.println("Date12 = " + fmt03.format(date12)); //2° Forma de escrita para formatar somente a data para local um texto.
+		
+		System.out.println("Date13 = " + date13.format(fmt04)); //1° Forma de escrita para formatar somente data e hora local para um texto.
+		System.out.println("Date13 = " + fmt04.format(date13)); //2° Forma de escrita para formatar somente data e hora local para um texto.
+		
+		System.out.println("Date14 = " + fmt05.format(date14)); //Esta é a única forma de converter data e hora para texto, pois o Instant não tem o método .format()
+		
+		
+		
 	}
 
 }
