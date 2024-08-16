@@ -65,6 +65,38 @@ public class Program {
 		System.out.println("Date14 = " + fmt05.format(date14)); //Esta é a única forma de converter data e hora para texto, pois o Instant não tem o método .format()
 		
 		
+		//CONVERTENDO DATA E HORA GLOBAL PARA PARA DATA LOCAL.
+		Instant date15 = Instant.parse("2002-06-25T01:30:26Z");
+		LocalDate r1 = LocalDate.ofInstant(date15, ZoneId.systemDefault()); //pegando uma data global e convertendo para data local do computador do usuário.
+		LocalDate r2 = LocalDate.ofInstant(date15, ZoneId.of("Portugal")); //pegando uma data global e convertendo para data local de Portugal.
+		
+		LocalDateTime r3 = LocalDateTime.ofInstant(date15, ZoneId.systemDefault());
+		LocalDateTime r4 = LocalDateTime.ofInstant(date15, ZoneId.of("Portugal"));
+		
+		System.out.println("r1 = " + r1);
+		System.out.println("r2 = " + r2);
+		
+		System.out.println("r3 = " + r3);
+		System.out.println("r4 = " + r4);
+		
+		//PEGANDO DADOS ESPECÍFICOS A PARTIR DE UMA DATA E HORARIO LOCAL.
+		LocalDateTime date16 = LocalDateTime.parse("2002-09-25T10:30:24");
+		
+		int day = date16.getDayOfMonth();
+		int month = date16.getMonthValue();
+		int year = date16.getYear();
+		
+		int hour = date16.getHour();
+		int minutes = date16.getMinute();
+		int seconds = date16.getSecond();
+		
+		System.out.println("date16 (day): " + day);
+		System.out.println("date16 (month): " + month);
+		System.out.println("date16 (year): " + year);
+		System.out.println("date16 (hours): " + hour);
+		System.out.println("date16 (minutes): " + minutes);
+		System.out.println("date16 (seconds): " + seconds);
+		
 		
 	}
 
