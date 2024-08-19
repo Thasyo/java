@@ -1,10 +1,12 @@
 package application;
 
+import java.time.Duration;
 import java.time.Instant;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
+import java.time.temporal.ChronoUnit;
 
 public class Program {
 
@@ -96,6 +98,43 @@ public class Program {
 		System.out.println("date16 (hours): " + hour);
 		System.out.println("date16 (minutes): " + minutes);
 		System.out.println("date16 (seconds): " + seconds);
+		
+		//CÁLCULOS COM DATA HORA
+		
+		//DIMINUINDO E ADICIONANDO TEMPO NA DATA HORA.
+		LocalDate date17 = LocalDate.parse("2022-07-20");
+		LocalDateTime date18 = LocalDateTime.parse("2022-07-20T01:30:26");
+		Instant date19 = Instant.parse("2022-07-20T01:30:26Z");
+
+		LocalDate pastWeekDate = date17.minusDays(7);
+		LocalDate nextWeekDate = date17.plusDays(7);
+		
+		System.out.println("Date17 (semana passada) = " + pastWeekDate);
+		System.out.println("Date17 (próxima semana) = " + nextWeekDate);
+		
+		LocalDateTime pastWeekDateTime = date18.minusDays(7);
+		LocalDateTime nextWeekDateTime = date18.plusDays(7);
+		
+		System.out.println("Date18 (semana passada) = " + pastWeekDateTime);
+		System.out.println("Date18 (próxima semana) = " + nextWeekDateTime);
+		
+		Instant pastWeekInstant = date19.minus(7, ChronoUnit.DAYS);
+		Instant nextWeekInstant = date19.plus(7, ChronoUnit.DAYS);
+		
+		System.out.println("Date19 (semana passada) = " + pastWeekInstant);
+		System.out.println("Date19 (próxima semana) = " + nextWeekInstant);
+		
+		//DURATION: CÁLCULO PARA SABER A DURAÇÃO ENTRE DUAS DATA HORAS.
+		Duration durationDate17 = Duration.between(pastWeekDate.atStartOfDay(), date17.atStartOfDay());
+		Duration durationDate18 = Duration.between(pastWeekDateTime, date18);
+		Duration durationDate19 = Duration.between(pastWeekInstant, date19);
+		Duration durationDate19Part02 = Duration.between(date19, pastWeekInstant);
+		
+		System.out.println("date17 (duration) = " + durationDate17.toDays());
+		System.out.println("date18 (duration) = " + durationDate18.toDays());
+		System.out.println("date19 (duration) = " + durationDate19.toDays());
+		System.out.println("date19 (duration) = " + durationDate19Part02.toDays());
+		
 		
 		
 	}
