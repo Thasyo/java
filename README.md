@@ -1861,3 +1861,78 @@ Sintaxe:
     - ZoneId
     
     - ChronoUnit
+
+<h1>SESSÃO 12 - GIT E GITHUB</h1>
+
+## GIT
+
+- é um sistema de versionamento: 
+    
+    - você controla as modificações de um projeto por meio de 
+    versões chamadas "commits".
+
+## GITHUB
+
+### É um serviço online de hospedagem de repositórios Git remotos.
+
+- Possui uma interface gráfica web: github.com
+
+- É uma plataforma social (usuários, página de perfil, seguidores, colaboração, etc.). Dica: currículo!
+
+- Maior serviço do mundo de hospedagem de projetos de código aberto
+
+- Modelo de cobrança: gratuito para projetos de código aberto, pago para projetos privados
+
+- Alternativas: BitBucket, GitLab, etc.
+
+## REPOSITÓRIO REMOTO E LOCAL
+
+- Um projeto controlado pelo Git é chamado de "repositório de versionamento".
+
+- Tipicamente uma cópia "oficial" do repositório fica salvo em um servidor - "REPOSITÓRIO REMOTO".
+
+- Cada pessoa que trabalha no projeto pode fazer uma cópia do repositório para seu computador - "REPOSITÓRIO LOCAL". 
+
+- A pessoa então faz suas alterações no projeto (novos commits) e depois salva as alterações no servidor.
+
+## CONFIGURANDO IDENTIFICAÇÃO NO GIT
+
+```
+
+git config --global user.name "Seu nome"
+git config --global user.email "Seu email de cadastro do github"
+git config --list
+
+```
+
+## SALVANDO PRIMEIRA VERSÃO DO PROJETO NO GITHUB
+
+```
+
+git init
+
+git add .
+
+git commit -m "Mensagem explicativa"
+
+git branch -M main
+
+git remote add origin "Link-do-repositorio.com"
+
+git push -u origin main
+
+```
+
+## SALVANDO UMA NOVA VERSÃO
+
+```
+
+git status
+
+git add .
+
+git commit -m "Mensagem explicativa"
+
+git push
+
+```
