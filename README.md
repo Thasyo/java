@@ -1898,17 +1898,16 @@ Sintaxe:
 ## CONFIGURANDO IDENTIFICAÇÃO NO GIT
 
 ```
-
 git config --global user.name "Seu nome"
-git config --global user.email "Seu email de cadastro do github"
-git config --list
 
+git config --global user.email "Seu email de cadastro do github"
+
+git config --list
 ```
 
 ## SALVANDO PRIMEIRA VERSÃO DO PROJETO NO GITHUB
 
 ```
-
 git init
 
 git add .
@@ -1920,13 +1919,11 @@ git branch -M main
 git remote add origin "Link-do-repositorio.com"
 
 git push -u origin main
-
 ```
 
 ## SALVANDO UMA NOVA VERSÃO
 
 ```
-
 git status
 
 git add .
@@ -1934,5 +1931,50 @@ git add .
 git commit -m "Mensagem explicativa"
 
 git push
+```
+
+## CLONAR E MODIFICAR UM PROJETO
 
 ```
+git clone <endereço do projeto a ser clonado>
+
+após fazer aglumas modificações locais...
+
+git add .
+
+git commit -m "Mensagem explicativa"
+
+git push
+```
+
+## VERIFICANDO HISTÓRICO DE VERSÕES (COMMITS)
+
+```
+git log
+```
+
+#### VERIFICANDO HISTÓRICO DE VERSÃO RESUMIDA
+
+```
+git log --oneline
+```
+
+## GIT STATUS, ÁREA DE STAGE E O GIT RESET
+
+- O GIT STATUS TEM 03 CAMPOS:
+
+    - MODIFIED: quando é modificado um arquivo.
+    - UNTRACKED: quando é criado um arquivo.
+    - DELETED: quando deletado um arquivo.
+
+- STAGE
+
+    - É a área acessada com o "git status" que, após o "git add", você consegue identificar quais arquivos foram modificados, criados ou deletados. Basicamente é todo o histórico de mudanças que poderão ser commitadas.
+
+- GIT RESET
+
+    - Ele reseta todos os arquivos colocados na área de stage e possibilita ao desenvolvedor organizar melhor os seus futuros commits.
+
+## GIT DIFF
+
+- Mostra todas as diferenças entre arquivos modificados.
