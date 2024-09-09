@@ -1978,3 +1978,63 @@ git log --oneline
 ## GIT DIFF
 
 - Mostra todas as diferenças entre arquivos modificados.
+
+## GIT CHECKOUT
+
+- Permite modificar temporariamente os arquivos do projeto ao estado de um dado commit ou branch;
+
+- Código do commit, HEAD:
+
+    - Cada commit possui um código, que pode ser utilizado para referenciar o commit;
+
+    -  O último commit do histórico do branch corrente também pode ser referenciado pela palavra HEAD;
+
+    - É possível referenciar um commit N versões antes de HEAD usando ~N, por exemplo:
+
+    - HEAD~1 (penúltimo commit);
+    - HEAD~2 (antepenúltimo commit);
+
+- IMPORTANTE: antes de fazer o checkout para voltar para HEAD, certifique-se de que não haja mudanças nos arquivos. Se você acidentalmente mudou alguma coisa, desfaça as modificações usando:
+
+```
+git reset
+
+git clean -df
+
+git checkout -- .
+```
+
+## ARQUIVO .GIT IGNORE
+
+- É um arquivo que indica o que NÃO deve ser salvo pelo Git. 
+
+- Geralmente o arquivo .gitignore fica salvo na pasta principal do repositório. Mas também é possível salvar outros arquivos .gitignore em subpastas do repositório, para indicar o que deve ser ignorado por cada subpasta.
+
+### Exemplos de projetos com .gitignore
+
+- https://github.com/acenelio/composition1-java
+- https://github.com/acenelio/dsmovie
+
+### Casos comuns de arquivos que não devem ser salvos pelo Git:
+
+- Arquivos compilados:
+
+    - Linguagens compiladas (C, C++, Java, C#, etc.) geram arquivos de código compilado para executar o programa localmente. 
+
+- Arquivos de bibliotecas externas usadas no projeto:
+    
+    - Projetos reais utilizam bibliotecas externas (programas prontos disponíveis na Internet). Por exemplo, projetos JavaScriptcom NPM tipicamente salvam uma subpasta "node_modules" na pasta do seu projeto. 
+
+- Arquivos de configuração da sua IDE:
+
+    - IDE'spodem salvar uma subpasta com arquivos de configuração na pasta do projeto (exemplo: .vscode). 
+
+- Arquivos de configuração do seu sistema:
+
+    - Por exemplo, sistemas Mac podem gravar uma subpasta .ds_store na pasta do projeto.
+
+#### Sugestão
+
+- Em caso de dúvidas sobre o que colocar no arquivo .gitignore, pesquise o modelo na internet:
+
+    - <nome_da_tecnologia> .gitignore
