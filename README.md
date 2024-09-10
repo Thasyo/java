@@ -2038,3 +2038,88 @@ git checkout -- .
 - Em caso de dúvidas sobre o que colocar no arquivo .gitignore, pesquise o modelo na internet:
 
     - <nome_da_tecnologia> .gitignore
+
+## COMO REMOVER ARQUIVOS DA ÁREA DE STAGE
+
+```
+git status
+
+git reset
+```
+
+## COMO DESFAZER MODIFICAÇÕES NÃO SALVAS
+
+```
+git status
+
+git reset
+
+git clean -df
+
+git checkout -- .
+```
+
+## O QUE FAZER QUANDO ABRIR O EDITOR VIM
+
+- Estas ações podem abrir o editor VIM no terminal:
+    
+    - Fazer um commit sem mensagem;
+
+    - Fazer um merge de três vias;
+
+### Habilitar modo de edição
+
+```
+i
+```
+
+### Sair do VIM, salvando as alterações
+
+```
+<ESC>
+
+:wq
+
+<ENTER>
+```
+
+### Sair do VIM, descartando as alterações
+
+```
+<ESC>
+
+:q!
+
+<ENTER>
+```
+
+## COMO DELETAR O ÚLTIMO COMMIT SEM DESFAZER AS MODIFICAÇÕES
+
+```
+git status
+
+git reset --soft HEAD~1
+```
+
+## COMO DELETAR COMMITS E TAMBÉM MODIFICAÇÕES NOS ARQUIVOS
+
+### Voltar o projeto ao estado de um dado commit:
+
+#### * Essa ação deleta commits e alterações posteriores a esse commit *
+
+```
+git status
+
+git reset --hard <código do commit>
+```
+
+### Voltar o projeto ao estado do penúltimo commit:
+
+```
+git status
+
+git reset --soft HEAD~1
+```
+
+<strong>CUIDADO: AÇÃO DESTRUTIVA!</strong>
+
