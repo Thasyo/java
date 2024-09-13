@@ -2123,3 +2123,16 @@ git reset --soft HEAD~1
 
 <strong>CUIDADO: AÇÃO DESTRUTIVA!</strong>
 
+## COMO ATUALIZAR O REPOSITÓRIO LOCAL EM RELAÇÃO AO REMOTO
+
+```
+git status
+
+git pull origin <nome_da_branch>
+```
+
+## COMO APONTAR O PROJETO PARA OUTRO REPOSITÓRIO REMOTO
+
+```
+git remote set-url origin < link do repositório 'novo' >
+```
