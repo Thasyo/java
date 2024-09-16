@@ -1862,7 +1862,7 @@ Sintaxe:
     
     - ChronoUnit
 
-<h1>SESSÃO 12 - GIT E GITHUB</h1>
+<h1>SESSÃO 12 (BÔNUS) - GIT E GITHUB</h1>
 
 ## GIT
 
@@ -2136,3 +2136,67 @@ git pull origin <nome_da_branch>
 ```
 git remote set-url origin < link do repositório 'novo' >
 ```
+
+<h1>SESSÃO 12 - ENUMERAÇÕES E COMPOSIÇÃO</h1>
+
+## ENUMERAÇÕES
+
+- É um tipo especial que serve para especificar de forma literal um conjunto de constantes relacionadas;
+
+- Palavra chave em Java: enum
+
+- Vantagem: melhor semântica, código mais legível e auxiliado pelo compilador
+
+- Referência: https://docs.oracle.com/javase/tutorial/java/javaOO/enum.html
+
+### Exemplo
+
+```
+package entities.enums;
+
+public enum OrderStatus {
+
+    PENDING_PAYMENT, 
+    PROCESSING, 
+    SHIPPED, 
+    DELIVERED;
+
+}
+```
+
+```
+package entities;
+
+import java.util.Date;
+
+import entities.enums.OrderStatus;
+
+public class Order {
+
+    private Integer id;
+    private Date moment;
+    private OrderStatus status;
+
+    (...)
+
+}
+```
+
+## COMPOSIÇÃO
+
+- É um tipo de associação que permite que um objeto contenha outro.
+
+ - Relação "tem-um" ou "tem-vários".
+ 
+ - Vantagens:
+
+    - Organização: divisão de responsabilidades;
+ 
+    - Coesão;
+ 
+    - Flexibilidade;
+ 
+    - Reuso;
+ 
+ - Nota: embora o símbolo UML para composição (todo-parte) seja o diamante preto, neste contexto estamos chamando de composição qualquer associação tipo "tem-um" e "tem-vários".
+
