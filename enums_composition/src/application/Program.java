@@ -2,9 +2,15 @@ package application;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Locale;
+import java.util.Scanner;
 
-import exercise02.Comment;
-import exercise02.Post;
+import entities.enums.OrderStatus;
+import exercise03.Client;
+import exercise03.Order;
+import exercise03.OrderItem;
+import exercise03.Product;
 
 public class Program {
 
@@ -62,33 +68,83 @@ public class Program {
 		
 		//********** DESAFIO 02 ABAIXO *************
 		
-		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+//		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+//		
+//		Comment c1 = new Comment("Have a nice trip");
+//		Comment c2 = new Comment("Wow that's awesome!");
+//		Post post01 = new Post(sdf.parse("21/06/2018 13:05:44"), 
+//				"Traveling to New Zealand", 
+//				"I'm going to visit this wonderful country!", 
+//				12
+//		);
+//		
+//		post01.addComment(c1);
+//		post01.addComment(c2);
+//		
+//		Comment c3 = new Comment("Good night");
+//		Comment c4 = new Comment("May the force be with you");
+//		Post post02 = new Post(sdf.parse("28/07/2018 23:14:19"), 
+//				"Good night guys", 
+//				"See you tomorrow", 
+//				5
+//		);
+//		
+//		post02.addComment(c3);
+//		post02.addComment(c4);
+//		
+//		System.out.println(post01);
+//		System.out.println(post02);
 		
-		Comment c1 = new Comment("Have a nice trip");
-		Comment c2 = new Comment("Wow that's awesome!");
-		Post post01 = new Post(sdf.parse("21/06/2018 13:05:44"), 
-				"Traveling to New Zealand", 
-				"I'm going to visit this wonderful country!", 
-				12
-		);
+		//********** DESAFIO 03 ABAIXO *************
 		
-		post01.addComment(c1);
-		post01.addComment(c2);
+		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+		SimpleDateFormat sdf02 = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+		Scanner sc = new Scanner(System.in);
+		Locale.setDefault(Locale.US); 
 		
-		Comment c3 = new Comment("Good night");
-		Comment c4 = new Comment("May the force be with you");
-		Post post02 = new Post(sdf.parse("28/07/2018 23:14:19"), 
-				"Good night guys", 
-				"See you tomorrow", 
-				5
-		);
+		System.out.println("--- Insira os dados do cliente ---");
+		System.out.print("\nNome: ");
+		String clientName = sc.nextLine();
+		System.out.print("Email: ");
+		String clientEmail = sc.nextLine();
+		System.out.print("Data de aniversário: ");
+		Date birthDate = sdf.parse(sc.nextLine());
+		Client client = new Client(clientName, clientEmail, birthDate);
 		
-		post02.addComment(c3);
-		post02.addComment(c4);
+		System.out.println("\n--- Insira os dados do Pedido ---");
+		System.out.print("\nStatus do pedido: ");
+		String status = sc.nextLine();
+		Order order = new Order(new Date(), OrderStatus.valueOf(status));
 		
-		System.out.println(post01);
-		System.out.println(post02);
+		System.out.print("Quantos items para esse pedido: ");
+		Integer quantityItems = sc.nextInt();
 		
+		for(int i = 1; i <= quantityItems; i++) {
+			System.out.println("\n--- Insira os dados do " + i + "° Item ---");
+			System.out.print("\nNome do Produto: ");
+			sc.nextLine();
+			String productName = sc.nextLine();
+			System.out.print("Preço do Produto: ");
+			double productPrice = sc.nextDouble();
+			System.out.print("Quantidade: ");
+			int productQuantity = sc.nextInt();
+			Product product = new Product(productName, productPrice);
+			OrderItem orderItem = new OrderItem(productQuantity, product.getPrice());
+			order.addItem(orderItem);
+			order.setClient(client);
+		}
+		
+		System.out.println("\n--- ORDER SUMARY ---");
+		System.out.println("Momento do Pedido: " + sdf02.format(order.getMoment()));
+		System.out.println("Status do pedido: " + order.getStatus());
+		System.out.println("Cliente: " + order.getClient().getName() + " (" + sdf.format(order.getClient().getBirthDate()) + ") - " + order.getClient().getEmail());
+		System.out.println("Items do Pedido: ");
+		for(OrderItem i: order.getItems()) {
+			System.out.println(i.getProduct().getName() + ", $" + i.getPrice() + ", Quantidade: " + i.getQuantity() + ", SubTotal: $" + i.subTotal());
+		}
+		System.out.println("Total: $" + order.total());
+		
+		sc.close();
 	}
 
 }
