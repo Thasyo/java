@@ -2200,3 +2200,34 @@ public class Order {
  
  - Nota: embora o símbolo UML para composição (todo-parte) seja o diamante preto, neste contexto estamos chamando de composição qualquer associação tipo "tem-um" e "tem-vários".
 
+<h1>SESSÃO 13 - HERANÇA E POLIMORFISMO</h1>
+
+## HERANÇA
+
+- É um tipo de associação que permite que uma classe herde todosdados e comportamentos de outra.
+
+- Definições importantes
+    
+    - Herança é uma relação "é-um"
+    
+    - Herança tem o conceito de Generalização/especialização
+    
+    - Superclasse (classe base ou classe pai) / subclasse (classe derivada ou classe filha)
+    
+    - Herança / extensão
+    
+    - Herança é uma associação entre classes (e não entre objetos)
+
+- Vantagens
+    
+    - Reuso
+    
+    - Polimorfismo
+
+- Sintaxe
+    
+    - class A extends class B
+
+### Modificador de acesso protected
+
+- Na Herança, o modificador de acesso "protected" ganha importância fundamental, pois ele permite que as subclasses acessem os atributos da superclasse.
